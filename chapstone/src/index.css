@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.account {
+  color: rgb(187, 32, 32);
+}
+
+.account-photo {
+  max-height: 55%;
+  max-width: 55%;
+  margin-left: 20%;
+}
+.accounth1 {
+  color: rgb(191, 33, 33);
+  margin-top: 30%;
+}
