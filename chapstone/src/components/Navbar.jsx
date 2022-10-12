@@ -1,7 +1,6 @@
 import React from 'react';
 import SignIn from './SignIn'
 import LogOut from './LogOut'
-import Account from './Account';
 import {auth} from '../firebase'
 import {useAuthState} from 'react-firebase-hooks/auth'
 const style = {
@@ -17,7 +16,6 @@ const Navbar = () => {
       <a href = "/" className={style.heading}>Chapstone!</a>
       {user ? <a href="/"><LogOut /></a> : <SignIn />}
       {user ? <a href="/account" className="account" user={user}>{user.displayName}<img src={user.photoURL} alt={user.displayName} className="account-photo"/></a> : null}
-      {/* <a href="/account">xyz</a> */}
     </div>
   );
 };
