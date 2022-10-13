@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Navbar from './components/Navbar';
 import Chat from './components/Chat';
 import Account from './components/Account';
@@ -11,8 +11,9 @@ const style = {
   sectionContainer: `flex flex-col h-[90vh] bg-gray-100 mt-10 shadow-xl border relative`,
 };
 
-function App() {
-  const URL = "AIzaSyBiylYVG4rQ1fY136TzN0tS4ARQw1zA2KY";
+class App extends Component {
+  render() {
+  const URL = "https://chapstone-35ae7-default-rtdb.firebaseio.com/";
   const [messages, setMessages] = useState(null)
   const [user] = useAuthState(auth)
 
